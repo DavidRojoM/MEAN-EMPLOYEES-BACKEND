@@ -7,17 +7,29 @@ POST http://localhost:3000/api/employees
 Content-Type: application/json
 
 {
-  "name": "Pedro",
-  "position": "Senior",
-  "office": "Madrid",
-  "salary": "35000"
+  "name": "David",
+  "position": "Junior",
+  "office": "Marbella",
+  "salary": "20000"
 }
 ###
 
 ### getEmployee
-GET http://localhost:3000/api/employees/6119c0680e8b377b1b27bf1c
+GET http://localhost:3000/api/employees/6119c0c30e8b377b1b27b
 ###
 
 ### deleteEmployee
-DELETE http://localhost:3000/api/employees/6119c2a18903527e69b238ca
+DELETE http://localhost:3000/api/employees/6119c3537fd8a97f28bd2775
+###
+
+### updateEmployee
+PUT http://localhost:3000/api/employees/6119c0c30e8b377b1b27bf1e
+Content-Type: application/json
+
+{
+  "name": "Bartolo",
+  "position": "Semisenior",
+  "office": "Galicia",
+  "salary": "26000"
+}
 ###
