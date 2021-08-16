@@ -4,7 +4,10 @@ require('dotenv').config()
 
 const app = express()
 
+app.set('port', process.env.PORT || 3000)
+
 app.use(morgan('dev'))
-app.set('port', process.env.PORT)
+
+app.use('/api/employees', require('./routes/employees.routes'))
 
 module.exports = app
