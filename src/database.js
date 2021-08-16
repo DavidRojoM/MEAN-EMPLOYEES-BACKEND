@@ -7,6 +7,7 @@ mongoose
     {
       useUnifiedTopology: true,
       useNewUrlParser: true,
+      useFindAndModify: false,
     }
   )
   .then((db) => console.log('DB is connected'))
