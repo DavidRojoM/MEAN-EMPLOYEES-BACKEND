@@ -1,19 +1,27 @@
 const employees = {}
-employees.getEmployees = (req, res) => {
-  res.send('getEmployees')
+const Employee = require('../models/Employee')
+
+employees.getEmployees = async (req, res) => {
+  const employees = await Employee.find()
+  res.json(employees)
 }
 
-employees.createEmployee = (req, res) => {
-  res.send('createEmployee')
+employees.createEmployee = async (req, res) => {
+  const employee = new Employee(req.body)
+
+  await employee.save()
+  res.send({ message: 'Employee created' })
 }
-employees.getEmployee = (req, res) => {
-  res.send('getEmployee')
+employees.getEmployee = async (req, res) => {
+  const employee = await Employee.findById(req.params.id)
+  res.json(employee)
 }
 employees.updateEmployee = (req, res) => {
   res.send('updateEmployee')
 }
-employees.deleteEmployee = (req, res) => {
-  res.send('deleteEmploy')
+employees.deleteEmployee = async (req, res) => {
+  const employee = await Employee.findByIdAndDelete(req.params.id)
+  res.json(employee)
 }
 
 module.exports = employees

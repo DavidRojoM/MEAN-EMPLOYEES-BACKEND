@@ -4,5 +4,20 @@ GET http://localhost:3000/api/employees
 
 ### createEmployee
 POST http://localhost:3000/api/employees
+Content-Type: application/json
 
+{
+  "name": "Pedro",
+  "position": "Senior",
+  "office": "Madrid",
+  "salary": "35000"
+}
+###
+
+### getEmployee
+GET http://localhost:3000/api/employees/6119c0680e8b377b1b27bf1c
+###
+
+### deleteEmployee
+DELETE http://localhost:3000/api/employees/6119c2a18903527e69b238ca
 ###
