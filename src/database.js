@@ -7,8 +7,8 @@ mongoose
     {
       useUnifiedTopology: true,
       useNewUrlParser: true,
-      useFindAndModify: false,
+      useFindAndModify: false
     }
   )
-  .then((db) => console.log('DB is connected'))
-  .catch((err) => console.error('DB is not connected'))
+  .then(() => console.log('DB is connected'))
+  .catch(() => console.error('DB is not connected'))

@@ -1,4 +1,4 @@
-const database = require('./database')
+require('./database')
 const app = require('./app')
 app.listen(app.get('port'))
 
